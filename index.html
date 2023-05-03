@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Architect Portfolio</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="projects.html">Projects</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+	</nav>
+	<main>
+
+    <div class="logo-container">
+    <img src="images/logo_transparent.png" alt="Logo">
+  </div>
+
+
+		<div class="intro">
+			<p>Welcome to Charlotte Lonie Architecture! On this website, you can browse through a variety of high-quality floor plans that are available for purchase. As an experienced architect, I have carefully designed each plan with attention to detail and functionality. Whether you're looking to build a new home, expand an existing one, or just get some inspiration, there is sure to be a floor plan that meets your needs. If you have any questions about the plans or the purchasing process, please don't hesitate to contact me. I am always happy to assist you and provide any additional information you may need to make an informed decision.</p>
+		</div>
+
+		<div class="carousel">
+	  <div class="carousel-container">
+			<div class="carousel-slide">
+			 <a href="shandon-terrace.html"><img src="images/render1.png" alt="Slide 1"></a>
+		 </div>
+	    <div class="carousel-slide">
+	      <img src="images/render2.png" alt="Slide 2">
+	    </div>
+	    <div class="carousel-slide">
+	      <img src="images/render3.png" alt="Slide 3">
+	    </div>
+			<div class="carousel-slide">
+	      <img src="images/render4.png" alt="Slide 3">
+	    </div>
+			<div class="carousel-slide">
+	      <img src="images/render5.png" alt="Slide 3">
+	    </div>
+			<div class="carousel-slide">
+	      <img src="images/render6.png" alt="Slide 3">
+	    </div>
+			<div class="carousel-slide">
+	      <img src="images/render7.png" alt="Slide 3">
+	    </div>
+	  </div>
+	  <a class="carousel-prev">&#10094;</a>
+	  <a class="carousel-next">&#10095;</a>
+	</div>
+
+
+
+
+<script type="text/javascript">
+
+
+const carousel = document.querySelector('.carousel');
+const container = carousel.querySelector('.carousel-container');
+const slides = carousel.querySelectorAll('.carousel-slide');
+const prevBtn = carousel.querySelector('.carousel-prev');
+const nextBtn = carousel.querySelector('.carousel-next');
+
+let currentIndex = 0;
+let slideWidth = slides[0].clientWidth;
+
+// Set the initial position of the carousel
+container.style.transform = `translateX(${-slideWidth * currentIndex}px)`;
+
+// Update slideWidth variable if the window is resized
+window.addEventListener('resize', () => {
+  slideWidth = slides[0].clientWidth;
+  container.style.transform = `translateX(${-slideWidth * currentIndex}px)`;
+});
+
+// Add event listener to previous button
+prevBtn.addEventListener('click', () => {
+  if (currentIndex <= 0) return;
+  currentIndex--;
+  container.style.transform = `translateX(${-slideWidth * currentIndex}px)`;
+});
+
+// Add event listener to next button
+nextBtn.addEventListener('click', () => {
+  if (currentIndex >= slides.length - 1) return;
+  currentIndex++;
+  container.style.transform = `translateX(${-slideWidth * currentIndex}px)`;
+});
+
+
+</script>
+
+
+
+
+  <footer>
+  <div class="footer-content">
+    <div class="location">
+      <h4>Location</h4>
+      <p>123 clarchitecture street</p>
+    </div>
+    <div class="about">
+      <h4>About Us</h4>
+      <p>I am a dedicated architect providing creative and innovative designs for my clients.</p>
+    </div>
+    <div class="email">
+      <h4>Email</h4>
+      <p>clarchitecture@outlook.com</p>
+    </div>
+		<div class="footer-section">
+								<h4>Developed by <a href="https://odysseywebdev.github.io/odysseyweb/index.html">Odysseyweb</a></h4>
+	        </div>
+  </div>
+  <p>&copy; 2023 Charlotte Lonie. All Rights Reserved.</p>
+</footer>
+</body>
+</html>

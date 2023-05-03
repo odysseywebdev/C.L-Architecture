@@ -1,0 +1,302 @@
+body {
+	margin: 0;
+	padding: 0;
+	    font-family: 'Montserrat', sans-serif;
+			font-weight: normal;
+  background-color: #efefef;
+}
+
+
+
+/* Default styles */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+
+}
+
+.logo-container img {
+  height: 250px;
+  width: 250px;
+}
+
+nav {
+	background-color: #333333;
+	color: #efefef;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+nav li {
+	float: left;
+}
+
+nav li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+nav li a:hover {
+	background-color: #E1F4F3;
+}
+
+main {
+	background-color: white;
+	color: black;
+	padding: 20px;
+}
+
+.intro {
+	text-align: center;
+	margin-bottom: 40px;
+	font-weight: 300;
+	color: black;
+	font-size: 18px;
+	text-align: left;
+
+}
+
+.intro h1 {
+	font-size: 3rem;
+	margin-bottom: 0;
+}
+
+.intro h2 {
+	font-size: 2rem;
+	margin-top: 0;
+	color: black;
+
+}
+
+section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-content h4 {
+    margin-bottom: 10px;
+    color: grey;
+}
+
+.footer-content p {
+    margin: 0;
+    color: white;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: grey;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-content h4 {
+        font-size: 1rem;
+    }
+
+    footer {
+        padding: 10px;
+    }
+}
+
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 900px; /* adjust as needed */
+  margin: 0 auto;
+  overflow: hidden;
+	padding-bottom: 50px;
+}
+
+.carousel-container {
+  display: flex;
+  width: 300%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.carousel-slide {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+	border-radius: 25px;
+}
+
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00000;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  z-index: 1; /* added to ensure the buttons appear on top of the images */
+	cursor: pointer;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+  color: darkgrey;
+}
+
+.carousel-prev {
+  left: 10px; /* updated to adjust the button position */
+}
+
+.carousel-next {
+  right: 10px; /* updated to adjust the button position */
+}
+
+/* Media queries for responsive design */
+
+/* Mobile devices */
+@media screen and (max-width: 480px) {
+  .carousel-container {
+    width: 500%;
+  }
+  .carousel-slide {
+    flex: 0 0 20%;
+  }
+}
+
+/* Desktop devices */
+@media screen and (min-width: 481px) {
+  .carousel-container {
+    width: 300%;
+  }
+  .carousel-slide {
+    flex: 0 0 33.33333%;
+  }
+}
+
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 80%;
+}
+
+
+.photos{
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+   border-radius: 50px;
+   padding: 30px;
+
+}
+
+.center {
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* gallery for projects page */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.column {
+  flex-basis: calc(33.33% - 10px);
+  margin-bottom: 40px;
+}
+
+.thumbnail {
+  position: relative;
+}
+
+.thumbnail:hover img {
+  transform: scale(1.1);
+}
+
+.thumbnail img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+	border-radius: 25px;
+}
+
+.title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 5px;
+  font-size: 14px;
+  text-align: center;
+}
