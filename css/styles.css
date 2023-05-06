@@ -1,0 +1,379 @@
+body {
+	margin: 0;
+	padding: 0;
+	    font-family: 'Montserrat', sans-serif;
+			font-weight: normal;
+  background-color: #efefef;
+}
+
+
+
+/* Logo Image */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+
+}
+
+.logo-container img {
+  height: 250px;
+  width: 250px;
+}
+/* End of Logo Image */
+
+/* Nav */
+nav {
+	background-color: #000000;
+	color: #efefef;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+nav li {
+	float: left;
+}
+
+nav li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+nav li a:hover {
+	background-color: #E1F4F3;
+}
+
+main {
+	background-color: white;
+	color: black;
+	padding: 20px;
+}
+
+
+/* End of Nav */
+
+
+/* Intro Text */
+
+.intro {
+	text-align: center;
+	margin-bottom: 40px;
+	font-weight: 400;
+	color: #000000;
+	font-size: 18px;
+	text-align: left;
+}
+
+/* End of Intro Text */
+
+
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-content h4 {
+    margin-bottom: 10px;
+    color: grey;
+}
+
+.footer-content p {
+    margin: 0;
+    color: white;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: grey;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-content h4 {
+        font-size: 1rem;
+    }
+
+    footer {
+        padding: 10px;
+    }
+}
+
+/* End of Footer */
+
+
+/* Carousel */
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 900px; /* adjust as needed */
+  margin: 0 auto;
+  overflow: hidden;
+	padding-bottom: 50px;
+}
+
+.carousel-container {
+  display: flex;
+  width: 300%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.carousel-slide {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+	border-radius: 25px;
+}
+
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00000;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  z-index: 1; /* added to ensure the buttons appear on top of the images */
+	cursor: pointer;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+  color: darkgrey;
+}
+
+.carousel-prev {
+  left: 10px; /* updated to adjust the button position */
+}
+
+.carousel-next {
+  right: 10px; /* updated to adjust the button position */
+}
+
+/* Media queries for responsive design */
+
+/* Mobile devices */
+@media screen and (max-width: 480px) {
+  .carousel-container {
+    width: 500%;
+  }
+  .carousel-slide {
+    flex: 0 0 20%;
+  }
+}
+
+/* Desktop devices */
+@media screen and (min-width: 481px) {
+  .carousel-container {
+    width: 300%;
+  }
+  .carousel-slide {
+    flex: 0 0 33.33333%;
+  }
+}
+
+/* End of Carousel */
+
+.photos{
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+   border-radius: 25px;
+	 padding-bottom: 20px;
+
+
+}
+
+/* Center */
+.center {
+  text-align: center;
+}
+/* end of center */
+
+
+
+
+
+
+
+
+
+
+
+/* gallery for projects page */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.column {
+  flex-basis: calc(33.33% - 10px);
+  margin-bottom: 40px;
+}
+
+.thumbnail {
+  position: relative;
+}
+
+.thumbnail:hover img {
+  transform: scale(1.1);
+}
+
+.thumbnail img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+	border-radius: 25px;
+}
+
+.title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 5px;
+  font-size: 14px;
+  text-align: center;
+
+}
+
+/* End of Gallery for Products page */
+#contact {
+  background-color: #f2f2f2;
+  padding: 80px 0;
+}
+
+#contact h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+#contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+}
+
+#contact .form-group {
+  margin-bottom: 30px;
+}
+
+#contact .form-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #666;
+}
+
+#contact .form-group .input-group {
+  position: relative;
+}
+
+#contact .form-group .input-group-addon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 60px;
+  font-size: 20px;
+  color: #aaa;
+  background-color: transparent;
+  border: none;
+  pointer-events: none;
+}
+
+#contact .form-group input[type="text"],
+#contact .form-group input[type="email"],
+#contact .form-group input[type="tel"],
+#contact .form-group textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  background-color: #f2f2f2;
+}
+
+#contact .form-group input[type="text"]:focus,
+#contact .form-group input[type="email"]:focus,
+#contact .form-group input[type="tel"]:focus,
+#contact .form-group textarea:focus {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact .btn-submit {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contact .btn-submit:hover {
+  background-color: #999;
+}
